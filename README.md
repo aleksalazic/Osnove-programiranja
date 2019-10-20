@@ -1,3 +1,3 @@
 # Osnove-programiranja
 
-Zadaci sa vezbi is Osnova programiranja za smer SIT, FTN Novi Sad
+Zadaci sa vezbi iz Osnova programiranja za smer SIT, FTN Novi Sad
