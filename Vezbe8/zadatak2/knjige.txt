@@ -1,0 +1,4 @@
+1|Zelena Milja|Stiven King|Prometej|1800|4|2004
+2|Homo Sacer|Djordjo Agamben|Svetlost|700|8|2013
+3|Kako Citati|Slavoj Zizek|Svetlost|2000|2|2000
+4|Cetiri fundamentalna koncepta psihoanalize|Zak Lakan|Svetlost|2050|3|2000
