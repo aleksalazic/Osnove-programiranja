@@ -5,7 +5,7 @@ def main():
     prvi = 0
     drugi = 1
 
-    for i in range(0, n):
+    for i in range(1, n):
         temp = prvi
         prvi = drugi
         drugi = temp + prvi
