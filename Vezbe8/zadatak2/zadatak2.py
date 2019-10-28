@@ -29,16 +29,15 @@ def ispisi_knjige(lista_knjiga):
 
 
 def napravi_knjigu(id, naslov, autori, izdavac, cena, kolicina, godina):
-    knjiga = {}
-    knjiga['id'] = id
-    knjiga['naslov'] = naslov
-    knjiga['autori'] = autori
-    knjiga['izdavac'] = izdavac
-    knjiga['cena'] = cena
-    knjiga['kolicina'] = kolicina
-    knjiga['godina'] = godina
-
-    return knjiga
+    return {
+    	"id": id,
+    	"naslov": naslov,
+    	"autori": autori,
+    	"izdavac": izdavac,
+    	"cena": cena,
+    	"kolicina": kolicina,
+    	"godina": godina
+    }
 
 
 
