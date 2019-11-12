@@ -21,18 +21,19 @@
 
 
 
-def ispis(fajl, delimiter):
+
+def citaj_iz_fajla(fajl, delimiter):
+    korisnici_fajl = open(fajl, 'r')
     lista_korisnika = []
 
-    for line in fajl:
-        lista_jednog_korisnika = []
-        ime_korisnika, lozinka_korisnika = line.split(delimiter)[0], line.split(delimiter)[1].strip()
-        lista_jednog_korisnika.append(ime_korisnika)
-        lista_jednog_korisnika.append(lozinka_korisnika)
+    for korisnik in korisnici_fajl:
+        k = korisnik.strip().split(delimiter)
+        lista_korisnika.append(k)
 
-        lista_korisnika.append(lista_jednog_korisnika)
+    korisnici_fajl.close()
 
     return lista_korisnika
+
 
 
 
@@ -43,18 +44,14 @@ def upis_u_fajl(korisnicko_ime, lozinka, ime_fajla, delimiter):
 
     korisnici_unos.close()
 
-    korisnici_ispis = open(ime_fajla, 'r')
-    print(ispis(korisnici_ispis, delimiter))
-
-    korisnici_ispis.close()
+    return citaj_iz_fajla(ime_fajla, delimiter)
 
 
 
 def main():
 
-    upis_u_fajl('marko', 'markovic', 'korisnici.txt', '|')
-    upis_u_fajl('pera', 'peric', 'korisnici.txt', '|')
-    upis_u_fajl('steva', 'stevic', 'korisnici.txt', '|')
+    print(upis_u_fajl('marko', 'markovic', 'korisnici.txt', '|'))
+    
 
 
 
