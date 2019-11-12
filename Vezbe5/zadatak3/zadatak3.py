@@ -12,24 +12,20 @@
 # [['pera', 'peric'], ['jova', 'jovic'], ['steva', 'stevic']]
 
 
-def citaj_fajl(naziv_fajla, delimiter):
+def citaj_iz_fajla(fajl, delimiter):
+    korisnici_fajl = open(fajl, 'r')
     lista_korisnika = []
-    korisnici = open(naziv_fajla, 'r')
-    for line in korisnici:
-        lista_jednog_korisnika = []
-        ime, lozinka = line.split(delimiter)[0], line.split(delimiter)[1].strip()
 
-        lista_jednog_korisnika.append(ime)
-        lista_jednog_korisnika.append(lozinka)
+    for korisnik in korisnici_fajl:
+        k = korisnik.strip().split(delimiter)
+        lista_korisnika.append(k)
 
-        lista_korisnika.append(lista_jednog_korisnika)
+    korisnici_fajl.close()
 
     return lista_korisnika
 
 
 def main():
-    print(citaj_fajl('korisnici.txt', '|'))
-
-
+    print(citaj_iz_fajla('korisnici.txt', '|'))
 
 main()
