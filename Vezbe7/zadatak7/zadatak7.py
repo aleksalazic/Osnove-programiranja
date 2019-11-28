@@ -5,9 +5,7 @@ def ispisi_proizvode():
 	print(50*'-')
 	for i, proizvod in enumerate(proizvodi):
 		podaci = proizvod.split('|')
-		naziv = podaci[0]
-		cena = podaci[1]
-		kolicina = podaci[2]
+		naziv, cena, kolicina = podaci[0], podaci[1], podaci[2]
 		print('{0}.{1:>15}{2:>15}{3:>19}'.format(i+1, naziv, cena, kolicina))
 	
 	proizvodi.close()
@@ -27,9 +25,7 @@ def prijava(ime, lozinka):
 	prodavci = open('prodavci.txt', 'r')
 	for prodavac in prodavci:
 		podaci = prodavac.split('|')
-		ime_fajl = podaci[0]
-		lozinka_fajl = podaci[1].strip()
-		
+		ime_fajl, lozinka_fajl = podaci[0], podaci[1].strip()
 		if ime == ime_fajl and lozinka == lozinka_fajl:
 			prodavci.close()
 			return True
