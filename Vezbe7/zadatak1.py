@@ -8,7 +8,7 @@ def napravi_tabelu(v_0, v_n, t_0, t_n):
                 s += '\tt=' + str(j) + '\t'
             else: 
                 vrednosti = 3.74 + 0.6215*j - 35.75*((i-1)**0.16) + 0.4275*j*((i-1)**0.16)
-                s += '\t' + str(vrednosti)[0:5] + '\t'
+                s += '\t' + '{0:.3f}'.format(vrednosti) + '\t'
 
         print(s)
 
